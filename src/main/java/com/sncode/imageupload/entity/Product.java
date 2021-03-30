@@ -6,11 +6,12 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity()
+@Entity
 @Table(name = "PRODUCT", schema = "spring_db",
 uniqueConstraints = {
         @UniqueConstraint(name = "product_name_unique", columnNames = "product_name")
@@ -39,6 +40,10 @@ public class Product {
             nullable = false)
 
     private String productName;
+
+
+    @OneToMany
+    private List<ProductReceive> productReceives;
 
 
 

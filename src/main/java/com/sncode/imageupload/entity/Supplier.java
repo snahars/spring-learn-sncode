@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "SUPPLIER", schema = "spring_db")
+//@Entity
+//@Table(name = "SUPPLIER", schema = "spring_db")
 public class Supplier {
 
     @Id

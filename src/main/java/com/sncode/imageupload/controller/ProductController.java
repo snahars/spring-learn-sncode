@@ -3,12 +3,14 @@ package com.sncode.imageupload.controller;
 import com.sncode.imageupload.entity.Product;
 import com.sncode.imageupload.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.InputMismatchException;
 import java.util.List;
 
 @RestController
+@EnableTransactionManagement
 public class ProductController {
 
     @Autowired

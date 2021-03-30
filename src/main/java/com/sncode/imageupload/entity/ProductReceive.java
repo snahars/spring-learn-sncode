@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -24,11 +25,6 @@ public class ProductReceive {
             generator = "product_receive_sequence")
 
     private Long receiveId;
-
-    @Column(name = "product_id",
-            nullable = false)
-
-    private Long productId;
 
     @Column(name = "supplier_id",
             nullable = false)
@@ -52,5 +48,9 @@ public class ProductReceive {
             updatable = false)
 
     private Date receiveDate;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Product product;
 
 }

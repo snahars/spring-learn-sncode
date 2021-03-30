@@ -10,8 +10,8 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "STORE", schema = "spring_db")
+//@Entity
+//@Table(name = "STORE", schema = "spring_db")
 public class Store {
 
     @Id

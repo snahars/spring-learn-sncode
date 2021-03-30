@@ -4,6 +4,7 @@ import com.sncode.imageupload.entity.Product;
 import com.sncode.imageupload.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Transactional
     public Product addProduct ( Product product) {
         return productRepository.save(product);
     }
