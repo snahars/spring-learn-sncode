@@ -20,3 +20,6 @@ $ git remote -v
 
 git push origin master/main
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+Push the changes in your local repository to GitHub.
+git push -f origin master
